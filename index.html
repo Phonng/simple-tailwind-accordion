@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://kit.fontawesome.com/4a314d7cd5.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+      @layer components {
+        .item {
+          @apply w-full sm:w-96 text-xs sm:text-sm flex items-center gap-x-3 flex-wrap select-none;
+        }
+        .content {
+          @apply peer-checked:max-h-max max-h-0 basis-full peer-checked:border-y-[1px] border-blue-300 peer-checked:p-3 overflow-hidden transition-all select-text;
+        }
+      }
+    </style>
+    <title>Accordion</title>
+  </head>
+  <body class="grid place-content-center h-screen">
+    <ul class="text-white shadow-2xl">
+      <!-- single Accordion -->
+      <li class="bg-indigo-500 item">
+        <!-- wrap is important here -->
+        <input type="checkbox" id="faq1" class="peer appearance-none" />
+        <i class="fa-solid fa-chevron-right peer-checked:hidden inline"></i>
+        <i class="fa-solid fa-chevron-down peer-checked:inline hidden"></i>
+        <label for="faq1" class="py-4 cursor-pointer grow">
+          <!-- note: grow is used to fill all remaining space of the article -->
+          <p>Hồ sơ đăng ký vay vốn cần những gì??</p></label
+        >
+        <!-- note: checkbox will be triggered even if label is triggered. -->
+        <div class="content">
+          <!-- note: basis may not work without wrap -->
+          <p>
+            Bạn không cần chuẩn bị bất cứ giấy tờ gì. chỉ cần bạn xác nhận là
+            chủ gian hàng và các thông tin bạn cung cấp là hoàn toàn chính xác.
+            Dựa trên sự đồng ý của bạn về việc chia sẻ dữ liệu gian hàng, chúng
+            tôi sẽ tiến hành đánh giá tình hình kinh doanh dựa trên các tiêu chí
+            mà ngân hàng đặt ra. Nếu bạn đáp ứng đủ các yêu cầu, KiotViet sẽ
+            thay bạn chuẩn bị hồ sơ vay vốn và gửi đến ngân hàng. Lưu ý: Dữ liệu
+            về gian hàng của bạn chỉ được sử dụng cho mục đích vay vốn. cam kết
+            không sử dụng dữ liệu vào bất kỳ mục đích nào khác.
+          </p>
+        </div>
+      </li>
+   
+        <!-- wrap is important here -->
+        <input type="checkbox" id="faq4" class="peer appearance-none" />
+        <i class="fa-solid fa-chevron-right peer-checked:hidden inline"></i>
+        <i class="fa-solid fa-chevron-down peer-checked:inline hidden"></i>
+        <label for="faq4" class="py-4 cursor-pointer grow">
+          <!-- note: grow is used to fill all remaining space of the article -->
+          <p>Do you have a portfolio?</p></label
+        >
+        <!-- note: checkbox will be triggered even if label is triggered. -->
+        <div class="content">
+          <!-- note: basis may not work without wrap -->
+          <p>
+            Go,
+            <a
+              class="text-blue-100 hover:underline underline-offset-2"
+              target="_blank"
+              href="https://onemanse.vercel.app"
+              >there</a
+            >
+          </p>
+        </div>
+      </li>
+    </ul>
+  </body>
+</html>
